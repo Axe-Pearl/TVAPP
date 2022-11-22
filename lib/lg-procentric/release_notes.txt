@@ -1,0 +1,559 @@
+#=============================================================================
+#   Creative Innovation Center, LG ELECTRONICS INC., SEOUL, KOREA            =
+#   Copyright(c) 2018 by LG Electronics Inc.                                 =
+#=============================================================================
+
+Changes for 1.23.0:
+1) add tv property
+    - 'input_splash_image'
+2) add sound output type
+    - hcap.system.SoundOutputType.OFF
+    - hcap.system.SoundOutputType.OPTICAL
+    - hcap.system.SoundOutputType.OPTICAL_LGSOUNDSYNC
+    - hcap.system.SoundOutputType.EXTERNAL_ARC
+3) add default sound output control function
+    - hcap.system.getDefaultSoundOutput
+    - hcap.system.setDefaultSoundOutput
+4) add usb power control function
+    - hcap.system.getUsbPowerControl
+    - hcap.system.setUsbPowerControl
+5) add external speaker volume control function
+    - hcap.volume.getExternalSpeakerVolumeLevel
+    - hcap.volume.setExternalSpeakerVolumeLevel
+6) add screen capture image function
+    - hcap.system.requestScreenCaptureImage
+    - hcap.system.getScreenCaptureImage
+    
+Changes for 1.22.2:
+1) modify soft AP function
+    - hcap.network.getSoftAP
+    - hcap.network.setSoftAP
+2) IoT features
+    - event "iot_thing_discovered"
+    - event "iot_binding_ready"
+    - event "iot_bridge_status_changed"
+    - event "iot_thing_registered"
+    - event "iot_thing_rejected"
+    - event "iot_component_reported"
+    - event "iot_thing_unregistered"
+    - event "iot_thing_meta_data_changed"
+    - event "iot_set_component_result_received"
+    - event "iot_framework_status_changed"
+    - event "iot_factory_reset_result_received"
+    - hcap.iot.requestSetBridgeStatus
+    - hcap.iot.getBridgeStatus
+    - hcap.iot.requestRegisterThing
+    - hcap.iot.requestRejectThing
+    - hcap.iot.getThingList
+    - hcap.iot.getBindingIdList
+    - hcap.iot.requestSetComponent
+    - hcap.iot.requestUnregisterThing
+    - hcap.iot.setThingNickname
+    - hcap.iot.requestSynchronizeThing
+    - hcap.iot.getFrameworkStatus
+    - hcap.iot.requestFactoryReset
+    - hcap.iot.getVersions
+3) STT (Speech-To-Text) features
+    - event "speech_to_text_status_changed"
+    - hcap.speech.setSpeechRecognition
+    - hcap.speech.getSpeechRecognition
+    - hcap.speech.decideHost
+         
+Changes for 1.22.1:
+1) deprecate preloaded application-related contents
+2) deprecate app side loading-related contents
+
+Changes for 1.22.0:
+1) add headphone volume control
+    - hcap.volume.getHealthcareHeadphoneMode
+    - hcap.volume.setHealthcareHeadphoneMode
+    - hcap.volume.getHeadphoneVolumeLevel
+    - hcap.volume.setHeadphoneVolumeLevel
+2) add screen keyboard language control
+    - hcap.system.getScreenKeyboardLanguageList
+    - hcap.system.setScreenKeyboardLanguage
+3) add Media Subtitle control
+    - hcap.Media.getSubtitle
+    - hcap.Media.setSubtitle
+4) add asynchronous ping
+    - hcap.network.asyncPing
+    - ping_result_received() event
+5) add installer menu item control
+    - hcap.property.getInstallerMenuItem
+    - hcap.property.setInstallerMenuItem
+6) change the property "screensaver_control"
+7) deprecate property "pcr_offset_in_ms"
+8) add beacon control
+    - hcap.beacon.setBeaconMode
+    - hcap.beacon.requestiBeacon
+    - hcap.beacon.requestEddystoneUid
+    - hcap.beacon.requestEddystoneUrl
+9) add vlan id control
+    - hcap.network.setVlanIdMode
+    - hcap.network.getVlanIdMode
+    - hcap.network.setLanId
+    - hcap.network.getLanId
+    - hcap.network.setAuxLanId
+    - hcap.network.getAuxLanId
+10) add event type in "ui_value_changed"
+    - beacon_mode
+    - healthcare_headphone_mode
+    - vlan_id_mode
+11) support IPv6
+12) modify tv_caption_ui description.
+
+Changes for 1.21.1:
+1) deprecate preloaded application-related contents
+2) deprecate app side loading-related contents
+
+Changes for 1.21.0:
+1) add the property "lg_service_xml_version"
+2) add AV lipsync configuration
+    - hcap.system.getAudioPtsOffset
+    - hcap.system.setAudioPtsOffset
+    - hcap.system.getVideoPtsOffset
+    - hcap.system.setVideoPtsOffset
+3) add monotonic time feature
+    - hcap.time.getCpuTime
+4) add proxy configuration
+    - hcap.system.getProxyServer
+    - hcap.system.setProxyServer
+    - hcap.system.expireProxyServer
+5) add ATSC 3.0 (Channel Class 6)
+    - hcap.channel.RfBroadcastType.CABLE_ATSC3
+    - hcap.channel.RfBroadcastType.TERRESTRIAL_ATSC3
+6) modify setTimeout Function
+7) add remote object inspector feature
+    - hcap.system.getBrowserDebugMode
+    - hcap.system.setBrowserDebugMode
+8) add no signal image feature
+    - hcap.system.getNoSignalImage
+    - hcap.system.setNoSignalImage
+
+Changes for 1.20.5:
+1) change path parameter to downloadPath in usb_file_downloaded() event
+
+Changes for 1.20.4:
+1) deprecate preloaded application-related contents
+2) deprecate app side loading-related contents
+
+Changes for 1.20.3:
+1) add tv property
+    - 'rms_trusted_ip'
+2) modify websocket reconnection when the websocket is disconnected.
+
+Changes for 1.20.2:
+1) deprecate preloaded application-related contents
+2) deprecate app side loading-related contents
+
+Changes for 1.20.1:
+1) add app side loading feature
+    - property "asl_mode"
+    - hcap.application.getServiceXml
+    - hcap.application.getDefaultServiceXml
+    - hcap.application.getApplicationList
+    - hcap.application.launchApplication
+    - hcap.application.destroyApplication
+2) add exception handling process
+3) add screensaver
+    - event "screensaver_event_received"
+    - property "screensaver_control"
+4) add bluetooth sound sync application control
+    - hcap.bluetooth.getBluetoothSoundSync
+    - hcap.bluetooth.setBluetoothSoundSync
+5) add event "ui_value_changed"
+    
+Changes for 1.20.0:
+1) deprecate hcap.externalinput.ExternalInputType.USB
+2) add external input list
+    - hcap.externalinput.getExternalInputList
+3) add HDMI connection/disconnection event
+    - event "hdmi_connection_changed"
+4) add pointer position and pointer click
+    - hcap.mouse.getPointerPosition
+    - hcap.mouse.setPointerPosition
+    - hcap.mouse.clickPointer
+5) add picture mode
+    - hcap.property.getPictureMode
+    - hcap.property.setPictureMode
+6) add to change sound output
+    - hcap.system.getSoundOutput
+    - hcap.system.setSoundOutput
+7) change the property "display_resolution" writable
+8) add on_destroy event
+    - event "on_destroy"
+    - hcap.system.beginDestroy
+    - hcap.system.endDestroy
+9) add xait version
+    - property "xait_version"
+10) add hotel mode settings
+    - hcap.property.getHotelMode
+    - hcap.property.setHotelMode
+11) deprecate preloaded application-related contents
+12) add bluetooth audio playback control
+    - hcap.bluetooth.audio.play
+    - hcap.bluetooth.audio.stop
+    - hcap.bluetooth.audio.pause
+    - hcap.bluetooth.audio.forward
+    - hcap.bluetooth.audio.backward
+13) add server/client certificate
+    - hcap.security.registerServerCertificate
+    - hcap.security.registerClientCertificate
+    - hcap.security.unregisterServerCertificate
+    - hcap.security.unregisterClientCertificate
+    - hcap.security.existServerCertificate
+    - hcap.security.existClientCertificate
+14) introduce hcap external variables which could be set before including hcap.js
+    - extWebWorker : if true, hcap.js will be included in web worker.
+
+Changes for 1.19.2:
+1) add RF Channel signal status
+    - hcap.channel.getChannelSignalStatus
+2) add Wi-Fi diagnostic information
+    - hcap.network.getWifiDiagnostics
+    
+Changes for 1.19.0:
+1) add locale configuration
+    - event "locale_changed"
+    - hcap.system.getLocaleList
+    - hcap.system.getLocale
+    - hcap.system.requestLocaleChange
+2) add the following comment to the property "tv_name"
+    - "tv_name" is also the SSID of soft AP, which will be valid after rebooting TV.
+3) add the property "https_xait_xml"
+4) add WebSocket Secure (wss://)
+5) add EZ Installation feature to specify LGService.xml dynamically
+    - property "alternative_lg_service_xml" 
+6) add alternative URL
+    - property "alternative_url"
+    - hcap.system.launchHcapHtmlApplication
+7) add property
+    - block_external_input
+    - block_ir
+    - block_local_key
+    - block_usb
+8) recover the properties "application_channel_control" and "tv_channel_ui", and deprecate the property "tv_channel_control"
+9) add checkout functionality
+    - hcap.checkout.requestCheckout
+    - hcap.checkout.takeCheckoutSnapshot
+10) add to set password to enter installation menu
+    - property "installation_menu_password"
+11) add pointer on/off of pointing devices
+    - hcap.mouse.isPointerOn
+    - hcap.mouse.setPointerOn
+12) add soft AP configuration
+    - hcap.network.getSoftAP
+    - hcap.network.setSoftAP
+13) change the property "soft_ap_password" to Write Only
+14) add system status
+    - hcap.system.getCpuUsage
+    - hcap.system.getMemoryUsage
+15) add the property "block_hidden_menu"
+16) change the spec of the property "soft_ap"
+    - "soft_ap" is reset to "0" whenever TV is rebooted or the power mode is changed from non-normal mode to normal mode if instant_power is enabled (1 or 2). => "soft_ap" is reset to "0" in the power off sequence (NORMAL -> WARM -> OFF).
+    - Soft AP configuration is stored even for "soft_ap" "0", and when "soft_ap" is "1", soft AP and VLAN is initialized with the stored configuration.
+17) add setting pointer size feature
+    - hcap.mouse.setPointerSize
+18) add the property "block_launcher"
+19) add hcap focus control feature
+    - property "block_hotkey"
+    - hcap.system.requestFocus
+    - hcap.system.getFocused
+20) add more preloaded application feature
+    - hcap.preloadedApplication.destroyPreloadedApplication
+    - add more preloaded applications in preloaded application list
+21) add the property "clock_display"
+22) add the property "teletext"
+23) add network configuration
+    - hcap.network.setNetworkDevice
+    - add dhcp in hcap.network.getNetworkDevice
+24) add Pro:Centric server configuration
+    - hcap.system.getProcentricServer
+    - hcap.system.setProcentricServer
+25) add secure MMR pairing
+    - property "secure_mmr_pairing"
+26) add MMR low battery notification
+    - event 'mmr_low_battery_event_received'
+27) add virtual keycode hcap.key.Code.DATA
+28) add the comment regarding the alarm channel in hcap.time.setAlarmInformation
+    - "The alarm channel is taken affect prior to the start channel."
+29) introduce hcap external variables which could be set before including hcap.js
+    - extHcapSecure : if true, wss will be used for hcap internally, otherwise ws will be used
+    - extRegisterHcapCloseHandler : if "onbeforeunload" and "onunload", register "onbeforeunload" handler and "onunload" handler respectively to close hcap websocket to avoid CPU 100% problem in HCAP browser when moving from hcap page to non hcap page 
+    - extDisableHcapConsoleLog : if true, disable HCAP console log, otherwise HCAP console log will be enabled
+30) add hcap.channel.VideoStreamType.HEVC for UHD H.265 channel
+31) change example code in hcap.network.getNetworkDevice
+32) add DIAL
+    - property "dial"
+33) add AllJoyn
+    - property "alljoyn"
+34) add clock source
+    - property "clock_source"
+35) add hcap.power.isWarmUpdate
+36) add bluetooth audio streaming
+    - event "bluetooth_event_received"
+    - hcap.bluetooth.setScanState
+    - hcap.bluetooth.disconnect
+37) deprecate the property "browser_network_error_handling" and comment as 'deprecate the behavior of "1". TV doesn't support "1" anymore.'
+38) add XML cloning feature
+    - hcap.system.requestCloning
+    - event "cloning_done_received"
+39) comment "(RTSP Only)" in hcap.Media.prototype.setPlaySpeed and hcap.Media.prototype.getPlaySpeed 
+40) comment "For Portal key (hcap.key.Code.PORTAL) when its attribute is 0, TV will launch the initial HCAP page." in hcap.key.addKeyItem
+41) fix property "hcap_js_extension_version"
+42) integrate hcap.key.Code.SUBTITLE and hcap.key.Code.CC keycodes to hcap.key.Code.SUBTITLE keycode
+43) add mode '10' in property 'instant_power'
+
+Changes for 1.18.4:
+1) add RS232C feature
+    - property "rs232c"
+    - hcap.rs232c.getConfiguration
+    - hcap.rs232c.setConfiguration
+    - hcap.rs232c.sendData
+    - hcap.rs232c.setStartupDataceps
+    - hcap.rs232c.clearStartupData
+    - event "rs232c_data_received"
+2) add DVB-T2 (Channel Class 5)
+    - hcap.channel.RfBroadcastType.TERRESTRIAL_2
+    - channel parameter : plpId
+3) change wifi_pass_key is not accessible with the comment "This value is not delivered to HCAP application by LG security policy since 1.18.4."
+4) fix channel class 1 (logical channel number) from support in both EU and US model to support in only US model
+5) change hcap.power.reboot behavior specification when "instant_power" property is "1" and "2".
+6) extend hcap.preloadedApplication.launchPreloadedApplication to launch with parameters
+
+Changes for 1.18.3:
+1) add further USB storage feature
+    - hcap.file.downloadFileToUsb
+    - hcap.file.deleteUsbFile
+    - event 'usb_file_downloaded'
+
+Changes for 1.18.2:
+1) fix keycode conversion bug : FORWARD
+2) add focus changed event for HCAP application
+    - event 'hcap_application_focus_changed'
+
+Changes for 1.18.1:
+1) add usb storage feature
+    - hcap.file.getUsbStorageList
+    - hcap.file.getUsbStorageFileList
+    - event 'usb_storage_status_changed'
+
+Changes for 1.18.0:
+1) add virtual keycode hcap.key.Code.SMART_HOME, hcap.key.Code.SCREEN_REMOTE, hcap.key.Code.POINTER and hcap.key.Code.LG_3D
+
+Changes for 1.17.3:
+1) restore synchronous handling of HCAP command
+2) fix CPU overworking issue
+3) reconnect websocket when the websocket is disconnected in initialization
+4) reconnect websocket when HCAP command is requested if the websocket is disconnected before
+5) websocket is disabled and return onFailure for HCAP commands in the browsers running in Windows and Mac OS X
+
+Changes for 1.17.2:
+1) remove synchronous handling of HCAP command to fix CPU overworking issue
+
+Changes for 1.17.1:
+1) reconnect websocket when the first websocket connection is closed and the hcap command is called
+2) reconnect websocket conditionally when the first websocket connection is closed in onclose.
+
+Changes for 1.17.0:
+1) add media event
+    - seek_done
+
+Changes for 1.16.0:
+1) add property
+	- soft_ap_ui
+    - soft_ap
+    - soft_ap_password
+
+Changes for 1.15.0:
+1) add property
+    - full_browser_start_page_url
+    - maximum_volume_level (EU model only)
+    - pcr_recovery
+    - mute_on_tv_input
+
+Changes for 1.14.0:
+1) add property
+    - browser_network_error_handling
+    - browser_https_security_level
+2) add event for channel status change
+    - event listener : channel_status_changed
+3) change hcap.channel.ChannelStatus
+	- AV_DISPLAYED and NO_SIGNAL are deprecated
+	- AUDIO_VIDEO_NOT_BLOCKED, AUDIO_VIDEO_BLOCKED, AUDIO_ONLY_BLOCKED and VIDEO_ONLY_BLOCKED are added
+
+Changes for 1.13.0:
+1) add property
+    - single_decoding
+    
+Changes for 1.12.0:
+1) add audio language control APIs of Media
+   : hcap.Media.getAudioLanguage 
+     hcap.Media.setAudioLanguage
+2) support Europe DVB-S2 (RF channel class 4)
+    - hcap.channel.RfBroadcastType.SATELLITE_2
+    - hcap.channel.Polarization
+    - channel : satelliteId
+    - channel : polarization
+3) add an optional channel parameter
+    - symbolRate
+4) support IGMPv3-SSM
+    - channel : sourceAddress
+5) add channel status
+    - hcap.channel.channelStatus
+    - hcap.channel.getCurrentChannel : channelStatus
+6) add external input USB to set external input
+    - hcap.externalinput.getCurrentExternalInput
+    - hcap.externalinput.setCurrentExternalInput
+    - hcap.externalinput.isExternalInputConnected
+7) change websocket open/close to when the page is loaded/unloaded (onload, unload)
+
+Changes for 1.11.0:
+1) add Media Hub event
+    - event listener : media_hub_event_received
+
+Changes for 1.10.1:
+1) add TCP socket daemon API
+    - hcap.socket.openTcpDaemon
+    - hcap.socket.closeTcpDaemon
+    - event listener : tcp_data_received
+2) add UDP send API
+
+Changes for 1.10.0:
+1) add property for smart pairing 
+  : wifi_screen_share
+  : smart_share
+  : smart_pairing
+  : dmr
+
+Changes for 1.9.0:
+1) add mode '2' in property 'instant_power'
+
+Changes for 1.8.0:
+1) add more inband data service
+    - hcap.channel.getReadyInbandDataService
+    - hcap.channel.InbandDataServiceType.NONE
+2) add more media   
+    - hcap_media_startup
+    - hcap_media_shutdown
+    - hcap_media_play(repeat_count)
+3) add property
+    - tv_name
+4) change note for property 'room_number' (max len 30 -> 21)
+5) add networkMode (wire or wireless) to hcap.network.getNetworkDevice
+6) deprecate property 'mac_address'
+7) modify example codes to make more understandable for API asynchronous usages
+
+Changes for 1.7.1:
+1) separate SUBTITLE/CC key
+
+Changes for 1.7.0:
+1) Media APIs
+   - hcap.Media.setSubtitleUrl
+   - hcap.Media.setSubtitleOn
+   - hcap.Media.getSubtitleOn
+   - fix to deliver media event
+2) add further explanation on hcap.carousel.requestCacheCarouselData for carousel data from IP multicast channel.
+3) add property
+   - security_level
+
+Changes for 1.6.1:
+1) fix parameter member (type -> inband_data_service_type) of the event 'inband_data_service_ready' due to the overriding by java script engine.
+2) add further explanation on hcap.carousel.requestCacheCarouselData for carousel data from IP multicast channel.
+
+Changes for 1.6.0:
+1) add hcap_command_call() before setInterval(hcap_command_call) because setInterval is not effective in unload stage.
+2) add hcap.time.getLocalTime() to get TV local time, GMT offset and daylight saving setting.
+3) change comment
+    - hcap.time.getPowerOnTime
+    - hcap.time.setPowerOnTime
+    - hcap.time.getAlarmInformation
+    - hcap.time.setAlarmInformation
+    - hcap.time.setLocalTime
+    - hcap.channel.getCurrentChannelSubtitleList for "xx"
+    - property "default_subtitle_language" for "xx"
+4) deprecate property
+    - gmt_offset_in_minute
+    - daylight_saving
+    - tv_channel_ui
+    - application_channel_control
+    - tv_mheg_ui
+5) add property
+    - instant_power
+    - tv_channel_control
+6) add RMS API
+    - hcap.rms.requestRms
+    - event listener : rms_response_received
+7) add UDP socket daemon API
+    - hcap.socket.openUdpDaemon
+    - hcap.socket.closeUdpDaemon
+    - event listener : udp_data_received
+8) add analog channel type
+    - hcap.channel.RfBroadcastType.ANALOG_PAL_BG
+    - hcap.channel.RfBroadcastType.ANALOG_PAL_DK
+    - hcap.channel.RfBroadcastType.ANALOG_PAL_I
+    - hcap.channel.RfBroadcastType.ANALOG_PAL_M
+    - hcap.channel.RfBroadcastType.ANALOG_PAL_N
+    - hcap.channel.RfBroadcastType.ANALOG_SECAM_BG
+    - hcap.channel.RfBroadcastType.ANALOG_SECAM_DK
+    - hcap.channel.RfBroadcastType.ANALOG_SECAM_L
+    - hcap.channel.RfBroadcastType.ANALOG_NTSC
+9) add network API
+    - hcap.network.getNetworkInformation
+    - event listener : network_event_received 
+10) deprecate audio stream type
+    - hcap.channel.AudioStreamType.ANALOG_BG
+    - hcap.channel.AudioStreamType.ANALOG_I
+    - hcap.channel.AudioStreamType.ANALOG_DK
+    - hcap.channel.AudioStreamType.ANALOG_L
+    - hcap.channel.AudioStreamType.ANALOG_MN
+    - hcap.channel.AudioStreamType.ANANLOG_LP
+    - hcap.channel.AudioStreamType.ANANLOG_END
+11) add picture property API and picture property key
+    - hcap.property.getPictureProperty
+    - hcap.property.setPictureProperty
+    - hcap.property.PicturePropertyKey
+12) add hcap.Media.createMedia parameter
+    - subtitleUrl
+13) add inband data service
+    - hcap.channel.launchInbandDataService
+    - event listener : inband_data_service_ready
+    - property 'inband_data_service_mhp'
+    - property 'inband_data_service_mheg'
+    - property 'inband_data_service_hbbtv'
+    - hcap.channel.InbandDataServiceType.MHP
+    - hcap.channel.InbandDataServiceType.MHEG
+    - hcap.channel.InbandDataServiceType.HBBTV
+
+Changes for 1.5.2:
+1) fix to support unicode program info title
+
+Changes for 1.5.1:
+1) add property
+    - wol_w
+    - wol_m
+    
+Changes for 1.5.0:
+1) add browser cursor visibility APIs
+    - hcap.mouse.isMouseVisible
+    - hcap.mouse.setMouseVisible
+2) change hcap.Media
+    - HOA -> Porting Layer
+3) add mouse event listener to get the mouse movement and status including its coordinate.
+4) add extension APIs of power on time APIs
+    - hcap.time.getAlarmInformation
+    - hcap.time.setAlarmInformation
+5) new property 
+    - room_number
+    - tv_preloaded_app_launcher_ui
+6) add preloaded application APIs
+    - hcap.preloadedApplication.getPreloadedApplicationList
+    - hcap.preloadedApplication.launchPreloadedApplication
+7) add program event information
+    - hcap.channel.getProgramInfo
+8) change keycode hcap.key.Code.BACK from 0x0008 to 0x01CD
+9) fix an issue that hcap command is crashed before websocket is connected
+10) add commets regarding channel class information for US & EU
+11) fix an issue that some commands are missing for consecutive hcap commands
+12) fix an issue that hcap command processing is locked up
+13) add a comment in hcap.time.setLocalTime to clarify the meaning of the parameter of local time information and change gmtOffsetInMinute range from (-720 ~ 720) to (-660 ~ 720).

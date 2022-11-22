@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:white;color:blue;display: none;">
+    <h1 style="color:blue;">Procentric TVAPP Version 6.4</h1>
+
+    <!-- will test the Application working or not -->
+    <div class="testApp" style="background-color: bisque;padding: 20px;">
+        <h4>App Test Run</h4>
+        <h4 id = "isLoading"></h4>
+        <h4 id="isOpen" style="color:blue;"></h4>
+    </div><br>
+
+    <!-- will recieve port data using an 'tcp_data_received' event -->
+    <div class="portDataContainer" style="background-color: bisque;padding: 20px;">
+       <h3>Port Data</h3>
+       <h3 id="check"></h3>
+       <h3 id = "isExist"></h3>
+       <h3 id="isListening"></h3>
+       <h3 id="portData"></h3>
+       <h5 id="result"></h5>
+       <h5 id="commandResult"></h5>
+
+       <!-- testing -->
+       <h5 id="thisCommand"></h5>
+       <h5 id="len"></h5>
+       <h5 id="thisPort"></h5>
+       <h5 id="thisIP"></h5>
+    </div>
+
+    <div id = "GET_VOLUME"></div>
+    <script type="text/javascript" src="lib/lg-procentric/hcap.js"></script>
+    <script src="src/index.js"></script>
+</body>
+</html>
